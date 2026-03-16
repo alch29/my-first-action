@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  lint-and-test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -26,8 +26,7 @@ jobs:
     - name: Run tests
       run: npm test
 
-jobs:
-  test:
+  test-coverage:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
